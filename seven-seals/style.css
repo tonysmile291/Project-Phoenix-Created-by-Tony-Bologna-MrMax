@@ -204,3 +204,37 @@ header h1 {
 
 }
 
+
+
+
+body {
+
+    background:
+    radial-gradient(circle at top, #1a1a3a, #050510);
+
+    color: white;
+
+    min-height: 100vh;
+
+}
+
+
+
+
+body {
+
+    background-color: #050510;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size: 60px 60px, 120px 120px;
+
+    background-position:
+    0 0,
+    30px 30px;
+
+    color: white;
+
+}
