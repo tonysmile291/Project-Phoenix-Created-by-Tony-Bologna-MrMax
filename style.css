@@ -1,0 +1,103 @@
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url("images/phoenix-background.jpg");
+
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+
+header {
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.logo {
+    color:#f6a623;
+    font-size:28px;
+    font-weight:bold;
+}
+
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+
+.hero {
+    text-align:center;
+    padding:100px 20px;
+}
+
+
+.hero h1 {
+    font-size:70px;
+    letter-spacing:8px;
+}
+
+
+.hero h2 {
+    color:#f6a623;
+    letter-spacing:10px;
+}
+
+
+.container {
+    display:flex;
+    gap:20px;
+    padding:40px;
+}
+
+
+.card {
+    background:rgba(15,20,30,.85);
+    border:1px solid #555;
+    border-radius:15px;
+    padding:30px;
+}
+
+
+.mission {
+    width:30%;
+}
+
+
+.services {
+    width:70%;
+}
+
+
+.service-box {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+
+.service {
+    padding:20px;
+    border:1px solid #555;
+    border-radius:10px;
+    text-align:center;
+}
+
+
+.service h3 {
+    color:#f6a623;
+}
+
+
+footer {
+    border-top:1px solid #555;
+    padding:30px;
+    text-align:center;
+}
