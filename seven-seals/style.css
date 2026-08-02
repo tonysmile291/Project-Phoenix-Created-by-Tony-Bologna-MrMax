@@ -1,12 +1,17 @@
 body {
 
     font-family: Arial, sans-serif;
+
     margin: 40px;
 
-    background-color: #050816;
+    background:
+    radial-gradient(circle at top, #1b2735, #050816);
+
     color: white;
 
 }
+
+    
 
 
 nav {
