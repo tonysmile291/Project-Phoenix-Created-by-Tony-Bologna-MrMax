@@ -238,3 +238,28 @@ body {
     color: white;
 
 }
+
+
+
+
+/* Seven Seals Deep Space Atmosphere */
+
+body {
+
+    background-color: #050510;
+
+    background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6) 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(0,255,255,0.25) 2px, transparent 80px),
+    radial-gradient(circle at 70% 20%, rgba(128,0,255,0.20), transparent 120px);
+
+    background-size:
+    180px 180px,
+    250px 250px,
+    600px 600px,
+    800px 800px;
+
+    color: white;
+
+}
