@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Phoenix | Rise. Rebuild. Renew.</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #101217;
+      color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      padding: 18px 6%;
+      background: #171a21;
+      border-bottom: 1px solid #604020;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand { color: #ffa631; font-weight: bold; font-size: 1.4rem; }
+    nav a { color: white; margin-right: 14px; text-decoration: none; }
+    nav a:hover { color: #ffa631; }
+    .hero {
+      text-align: center;
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #321d17, #101217 70%);
+    }
+    .phoenix { font-size: 4rem; }
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1.1;
+      margin: 12px 0;
+    }
+    .tagline { color: #ffa631; letter-spacing: .18em; font-weight: bold; }
+    .intro { max-width: 650px; margin: 25px auto; font-size: 1.2rem; }
+    main { max-width: 1200px; margin: auto; padding: 35px 18px; }
+    .mission, .resources {
+      background: #1b1e25;
+      border: 1px solid #5c4938;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+    h2 { color: #ffa631; }
+    .values { color: #e4c89f; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .resource {
+      padding: 20px;
+      background: #12151b;
+      border: 1px solid #46404a;
+      border-radius: 12px;
+    }
+    .resource h3 { color: #ffa631; margin-bottom: 5px; }
+    .resource p { margin-top: 5px; }
+    .pending {
+      display: inline-block;
+      padding: 7px 12px;
+      background: #333740;
+      border-radius: 7px;
+      color: #ddd;
+      font-size: .9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      border-top: 1px solid #604020;
+      background: #171a21;
+    }
+    footer strong { color: #ffa631; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">🔥 PROJECT PHOENIX</div>
+    <nav>
+      <a href="#mission">Our Mission</a>
+      <a href="#help">Get Help</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <div class="phoenix">🐦‍🔥</div>
+    <h1>PROJECT PHOENIX</h1>
+    <p class="tagline">RISE. REBUILD. RENEW.</p>
+    <p class="intro">
+      Every new beginning starts with one decision —
+      to keep moving forward.
+    </p>
+  </section>
+
+  <main>
+    <section class="mission" id="mission">
+      <h2>Our Mission</h2>
+      <p>Let's leave the world better than we found it.</p>
+      <p class="values">
+        Knowledge • Discipline • Evidence • Service
+      </p>
+      <p><em>Together, we rise.</em></p>
+    </section>
+
+    <section class="resources" id="help">
+      <h2>Gateway to Help</h2>
+      <p>
+        Our goal is to connect people with trustworthy
+        resources, organizations, and opportunities.
+      </p>
+      <div class="grid">
+        <article class="resource">
+          <h3>💜 Addiction Recovery</h3>
+          <p>Recovery and compassionate support.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>💚 Health Services</h3>
+          <p>Medical care and wellness resources.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>🧠 AI Services</h3>
+          <p>Tools to help you learn and grow.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>🎓 Education</h3>
+          <p>Learning opportunities and research.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>💼 Job Skills</h3>
+          <p>Training and career development.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>🏠 Housing Help</h3>
+          <p>Resources for finding stable housing.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>💵 Financial Literacy</h3>
+          <p>Guidance for managing your finances.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>⭐ Veteran Support</h3>
+          <p>Resources for those who served.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+        <article class="resource">
+          <h3>🤝 Community Programs</h3>
+          <p>People and organizations helping communities.</p>
+          <span class="pending">Resources coming soon</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>PROJECT PHOENIX</strong>
+    <p>Hope. Help. Healing.</p>
+    <p>Let's leave the world better than we found it.</p>
+  </footer>
+</body>
+</html>
