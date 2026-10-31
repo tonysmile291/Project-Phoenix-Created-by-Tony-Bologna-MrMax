@@ -87,7 +87,20 @@
     align-items: start;
   }
     }
-  </style>
+
+  /* Phoenix resource card hover effect */
+.resource {
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .resource:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 22px rgba(255, 140, 0, 0.35);
+  }
+}
+    </style>
 </head>
 <body>
   <header>
