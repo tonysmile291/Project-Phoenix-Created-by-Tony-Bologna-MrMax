@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treatment & Support | Project Phoenix</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #f7f7f7;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #101217 url('phoenix-city-background.png')
+                  center top / cover fixed;
+    }
+
+    header, footer {
+      padding: 22px 6%;
+      background: rgba(20, 24, 34, 0.65);
+      border-color: #604020;
+    }
+
+    header { border-bottom: 1px solid #604020; }
+    footer {
+      border-top: 1px solid #604020;
+      text-align: center;
+    }
+
+    .brand {
+      color: #ffa631;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    a { color: #ffbd70; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    h1, h2 { color: #ffa631; }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.2;
+    }
+
+    .intro {
+      max-width: 780px;
+      font-size: 1.15rem;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+      gap: 22px;
+      margin: 35px 0;
+    }
+
+    .resource-card {
+      padding: 25px;
+      border: 1px solid #80552c;
+      border-radius: 16px;
+      background: rgba(20, 24, 34, 0.76);
+      box-shadow: 0 0 18px rgba(255, 140, 0, 0.2);
+    }
+
+    .resource-card h2 { margin-top: 0; }
+
+    .resource-card a {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid #ffa631;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resource-card a:hover,
+    .resource-card a:focus-visible {
+      background: #ffa631;
+      color: #101217;
+    }
+
+    .notice {
+      padding: 20px;
+      background: rgba(20, 24, 34, 0.82);
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      body { background-attachment: scroll; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">🔥 PROJECT PHOENIX</div>
+    <a class="back-link" href="recovery-resources.html">
+      ← Back to Recovery Resources
+    </a>
+  </header>
+
+  <main>
+    <h1>💜 Treatment &amp; Support</h1>
+
+    <p class="intro">
+      Explore treatment information, recovery programs,
+      and peer-support organizations. These resources
+      can help you take the next step toward recovery.
+    </p>
+
+    <div class="resource-grid">
+
+      <section class="resource-card">
+        <h2>SAMHSA National Helpline</h2>
+        <p>
+          Free, confidential treatment referrals and
+          information for individuals and families.
+        </p>
+        <a href="https://www.samhsa.gov/find-help/national-helpline"
+           target="_blank" rel="noopener noreferrer">
+          Visit SAMHSA →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>FindTreatment.gov</h2>
+        <p>
+          Search for substance use and mental health
+          treatment facilities across the United States.
+        </p>
+        <a href="https://findtreatment.gov/"
+           target="_blank" rel="noopener noreferrer">
+          Find Treatment →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>Alcoholics Anonymous</h2>
+        <p>
+          Find AA meetings and information about
+          peer-supported recovery from alcohol use.
+        </p>
+        <a href="https://www.aa.org/"
+           target="_blank" rel="noopener noreferrer">
+          Explore AA →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>Narcotics Anonymous</h2>
+        <p>
+          Find NA meetings and peer support for
+          recovery from drug addiction.
+        </p>
+        <a href="https://na.org/"
+           target="_blank" rel="noopener noreferrer">
+          Explore NA →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>SMART Recovery</h2>
+        <p>
+          Explore evidence-informed recovery tools,
+          self-management strategies, and meetings.
+        </p>
+        <a href="https://smartrecovery.org/"
+           target="_blank" rel="noopener noreferrer">
+          Explore SMART →
+        </a>
+      </section>
+
+    </div>
+
+    <div class="notice">
+      <strong>Need immediate crisis support?</strong>
+      <p>
+        In the United States, call or text
+        <a href="tel:988">988</a>.
+        For a life-threatening emergency, call 911.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <strong>PROJECT PHOENIX</strong>
+    <p>Hope. Help. Healing.</p>
+    <p>Let's leave the world better than we found it.</p>
+    <a href="recovery-resources.html">
+      Return to Recovery Resources
+    </a>
+  </footer>
+
+</body>
+</html>
