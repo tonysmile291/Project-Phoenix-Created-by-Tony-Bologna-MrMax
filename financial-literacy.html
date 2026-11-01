@@ -3,197 +3,503 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Phoenix | Rise. Rebuild. Renew.</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Financial Literacy | Project Phoenix</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #101217 url('phoenix-city-background.png') center top / cover no-repeat fixed;
-      color: #f7f7f7;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      color: #f5f5f5;
+      line-height: 1.7;
+      background:
+        linear-gradient(
+          rgba(5, 10, 25, 0.25),
+          rgba(5, 10, 25, 0.35)
+        ),
+        url("phoenix-city-background.png")
+        center center / cover fixed;
     }
+
+    header, main, footer {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
     header {
-      padding: 18px 6%;
-      background: rgba(20, 24, 34, 0.65);
-      border-bottom: 1px solid #604020;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .brand { color: #ffa631; font-weight: bold; font-size: 1.4rem; }
-    nav a { color: white; margin-right: 14px; text-decoration: none; }
-    nav a:hover { color: #ffa631; }
-    .hero {
       text-align: center;
-      padding: 65px 20px;
-      background: rgba(0, 0, 0, 0.25);
+      padding: 45px 20px 25px;
     }
-    .phoenix { font-size: 4rem; }
+
+    h1, h2, h3 {
+      color: #ff9f2e;
+    }
+
     h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      line-height: 1.1;
-      margin: 12px 0;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
     }
-    .tagline { color: #ffa631; letter-spacing: .18em; font-weight: bold; }
-    .intro { max-width: 650px; margin: 25px auto; font-size: 1.2rem; }
-    main { max-width: 1200px; margin: auto; padding: 35px 18px; }
-    .mission, .resources {
-      background: rgba(20, 24, 34, 0.78);
-      border: 1px solid #5c4938;
-      box-shadow: 0 0 18px rgba(255, 140, 0, 0.25);
-      border-radius: 16px;
-      padding: 25px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+    }
+
+    main {
+      padding: 15px;
+    }
+
+    .glass {
+      background: rgba(8, 14, 30, 0.82);
+      border: 1px solid #d87918;
+      border-radius: 25px;
+      padding: 30px;
       margin-bottom: 25px;
     }
-    h2 { color: #ffa631; }
-    .values { color: #e4c89f; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+
+    .intro {
+      text-align: center;
     }
-    .resource {
-      padding: 20px;
-      background: rgba(18, 21, 27, 0.78);
-      border: 1px solid #46404a;
-      border-radius: 12px;
+
+    .resource-card {
+      background: rgba(7, 12, 26, 0.90);
+      border: 1px solid #a95b12;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 20px 0;
     }
-    .resource h3 { color: #ffa631; margin-bottom: 5px; }
-    .resource p { margin-top: 5px; }
-    .pending {
+
+    a {
+      color: #ffb45c;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover,
+    a:focus {
+      color: #ffd59b;
+    }
+
+    .note {
+      color: #e0e0e0;
+      font-size: 0.95rem;
+    }
+
+    .back-link {
       display: inline-block;
-      padding: 7px 12px;
-      background: #333740;
-      border-radius: 7px;
-      color: #ddd;
-      font-size: .9rem;
+      margin-top: 15px;
     }
+
     footer {
       text-align: center;
-      padding: 30px 15px;
-      border-top: 1px solid #604020;
-      background: rgba(20, 24, 34, 0.65);
-    }
-    footer strong { color: #ffa631; }
-    @media (min-width: 900px) {
-  .gateway-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 24px;
-    align-items: start;
-  }
+      padding: 30px 20px 50px;
+      background: rgba(8, 14, 30, 0.80);
+      border-top: 1px solid #d87918;
     }
 
-  /* Phoenix resource card hover effect */
-.resource {
-  transition: transform 0.25s ease,
-              box-shadow 0.25s ease;
-}
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
 
-@media (hover: hover) {
-  .resource:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 22px rgba(255, 140, 0, 0.35);
-  }
-}
-    </style>
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .glass {
+        padding: 22px;
+      }
+
+      .resource-card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <div class="brand">🔥 PROJECT PHOENIX</div>
-    <nav>
-      <a href="#mission">Our Mission</a>
-      <a href="#help">Get Help</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
 
-  <section class="hero" id="about">
-    <div class="phoenix" style="display:none">🐦‍🔥</div>
-    <h1>PROJECT PHOENIX</h1>
-    <p class="tagline">RISE. REBUILD. RENEW.</p>
-    <p class="intro">
-      Every new beginning starts with one decision —
-      to keep moving forward.
+<body>
+
+<header>
+  <h1>💵 Financial Literacy</h1>
+  <p class="tagline">Hope. Help. Healing.</p>
+  <p>Project Phoenix | Rise. Rebuild. Renew.</p>
+</header>
+
+<main>
+
+  <!-- INTRODUCTION -->
+
+  <section class="glass intro">
+    <h2>Building Financial Confidence</h2>
+
+    <p>
+      Understanding money can help
+      people make informed decisions,
+      reduce financial stress,
+      and plan for the future.
+    </p>
+
+    <p>
+      Whether you're starting a budget,
+      rebuilding credit, managing debt,
+      or learning how to save,
+      these resources can help.
+    </p>
+
+    <p>
+      <strong>People Before Profit.</strong>
     </p>
   </section>
 
-  <main>   <div class="gateway-layout">
-    <section class="mission" id="mission">
-      <h2>Our Mission</h2>
-      <p>Let's leave the world better than we found it.</p>
-      <p class="values">
-        Knowledge • Discipline • Evidence • Service
-      </p>
-      <p><em>Together, we rise.</em></p>
-    </section>
 
-    <section class="resources" id="help">
-      <h2>Gateway to Help</h2>
+  <!-- BUDGETING -->
+
+  <section class="glass">
+    <h2>📊 Budgeting & Money Management</h2>
+
+    <div class="resource-card">
+      <h3>Consumer Financial Protection Bureau</h3>
+
       <p>
-        Our goal is to connect people with trustworthy
-        resources, organizations, and opportunities.
+        The CFPB offers free educational
+        tools for budgeting, tracking
+        spending, managing bills,
+        and making financial decisions.
       </p>
-      <div class="grid">
-        <article class="resource">
-          <h3>💜 Addiction Recovery</h3>
-          <p>Recovery and compassionate support.</p>
-          <a href="recovery-resources.html">Explore Recovery Resources →</a>
-        </article>
-        <article class="resource">
-          <h3>💚 Health Services</h3>
-          <p>Medical care and wellness resources.</p>
-          <a href="health-services.html">Explore Health Services →</a>
-        </article>
-        <article class="resource">
-          <h3>🧠 AI Services</h3>
-          <p>Tools to help you learn and grow.</p>
-          <a href="ai-services.html">Explore AI Services →</a>
-        </article>
-        <article class="resource">
-          <h3>🎓 Education</h3>
-          <p>Learning opportunities and research.</p>
-          <a href="education.html">Explore Education Resources →</a>
-        </article>
-        <article class="resource">
-          <h3>💼 Job Skills</h3>
-          <p>Training and career development.</p>
-          <a href="job-skills.html">Explore Job Skills →</a>
-        </article>
-        <article class="resource">
-          <h3>🏠 Housing Help</h3>
-          <p>Resources for finding stable housing.</p>
-          <a href="housing-help.html">Explore Housing Help →</a>
-        </article>
-        <article class="resource">
-          <h3>💵 Financial Literacy</h3>
-          <p>Guidance for managing your finances.</p>
-          <span class="pending">Resources coming soon</span>
-        </article>
-        <article class="resource">
-          <h3>⭐ Veteran Support</h3>
-          <p>Resources for those who served.</p>
-          <span class="pending">Resources coming soon</span>
-        </article>
-        <article class="resource">
-          <h3>🤝 Community Programs</h3>
-          <p>People and organizations helping communities.</p>
-          <span class="pending">Resources coming soon</span>
-        </article>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <strong>PROJECT PHOENIX</strong>
-    <p>Hope. Help. Healing.</p>
-    <p>Let's leave the world better than we found it.</p>
- <p><a href="about-us.html">❤️ About Us — Meet the Project Phoenix Crew →</a></p>
-  </footer>
+      <a href="https://www.consumerfinance.gov/consumer-tools/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore CFPB Financial Tools →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>MyMoney.gov</h3>
+
+      <p>
+        Explore financial education
+        resources from the U.S.
+        government's Financial
+        Literacy and Education
+        Commission.
+      </p>
+
+      <a href="https://www.mymoney.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore MyMoney.gov →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- SAVING -->
+
+  <section class="glass">
+    <h2>💰 Saving & Emergency Funds</h2>
+
+    <div class="resource-card">
+      <h3>FDIC Money Smart</h3>
+
+      <p>
+        Free financial education
+        resources covering saving,
+        banking, credit, and
+        money management.
+      </p>
+
+      <a href="https://www.fdic.gov/consumer-resource-center/money-smart"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore FDIC Money Smart →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>America Saves</h3>
+
+      <p>
+        Find information and
+        encouragement for building
+        savings habits and
+        setting financial goals.
+      </p>
+
+      <a href="https://americasaves.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore America Saves →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- CREDIT -->
+
+  <section class="glass">
+    <h2>💳 Credit Reports & Credit Scores</h2>
+
+    <div class="resource-card">
+      <h3>AnnualCreditReport.com</h3>
+
+      <p>
+        The federally authorized
+        website for obtaining free
+        credit reports from the
+        nationwide credit reporting
+        companies.
+      </p>
+
+      <p class="note">
+        Accessing your own credit
+        report does not hurt
+        your credit score.
+      </p>
+
+      <a href="https://www.annualcreditreport.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Get Your Free Credit Reports →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>CFPB Credit Resources</h3>
+
+      <p>
+        Learn how credit reports
+        and credit scores work,
+        how to dispute errors,
+        and how to make informed
+        credit decisions.
+      </p>
+
+      <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Learn About Credit →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- DEBT -->
+
+  <section class="glass">
+    <h2>📉 Debt Management</h2>
+
+    <div class="resource-card">
+      <h3>CFPB Debt Collection Resources</h3>
+
+      <p>
+        Learn about debt collection,
+        consumer rights, and
+        steps to take when
+        dealing with collectors.
+      </p>
+
+      <a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore Debt Collection Help →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>FTC Debt Guidance</h3>
+
+      <p>
+        Learn about managing
+        debt, avoiding deceptive
+        debt-relief offers,
+        and understanding
+        consumer protections.
+      </p>
+
+      <a href="https://consumer.ftc.gov/articles/how-get-out-debt"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore FTC Debt Guidance →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- BANKING -->
+
+  <section class="glass">
+    <h2>🏦 Banking & Financial Basics</h2>
+
+    <div class="resource-card">
+      <h3>FDIC Consumer Resources</h3>
+
+      <p>
+        Learn about bank accounts,
+        deposit insurance,
+        financial safety,
+        and choosing banking services.
+      </p>
+
+      <a href="https://www.fdic.gov/consumer-resource-center"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore FDIC Consumer Resources →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FINANCIAL ASSISTANCE -->
+
+  <section class="glass">
+    <h2>❤️ Financial Assistance Resources</h2>
+
+    <div class="resource-card">
+      <h3>USA.gov Benefits</h3>
+
+      <p>
+        Find information about
+        government benefits
+        and assistance programs
+        for eligible individuals
+        and families.
+      </p>
+
+      <a href="https://www.usa.gov/benefits"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore Government Benefits →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>211 Community Assistance</h3>
+
+      <p>
+        Find local organizations
+        that may provide help
+        with food, utilities,
+        housing, and other
+        essential needs.
+      </p>
+
+      <a href="https://www.211.org/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Find Local Assistance →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- SCAM PREVENTION -->
+
+  <section class="glass">
+    <h2>🛡️ Protect Yourself From Financial Scams</h2>
+
+    <div class="resource-card">
+      <h3>Federal Trade Commission</h3>
+
+      <p>
+        Learn how to recognize
+        financial scams,
+        identity theft,
+        and fraudulent offers.
+      </p>
+
+      <a href="https://consumer.ftc.gov/scams"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore FTC Scam Prevention →
+      </a>
+    </div>
+
+    <div class="resource-card">
+      <h3>IdentityTheft.gov</h3>
+
+      <p>
+        Find guidance for reporting
+        identity theft and creating
+        a recovery plan.
+      </p>
+
+      <a href="https://www.identitytheft.gov/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Explore Identity Theft Recovery →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- OUR PROMISE -->
+
+  <section class="glass">
+    <h2>❤️ Our Promise</h2>
+
+    <p>
+      Project Phoenix believes
+      financial knowledge should
+      be accessible to everyone.
+    </p>
+
+    <p>
+      We do not charge visitors
+      to access these resources,
+      and we do not accept
+      payment for listing
+      financial education programs.
+    </p>
+
+    <p>
+      Some third-party services
+      may charge fees.
+      Always review costs
+      and terms before enrolling.
+    </p>
+
+    <p class="note">
+      These resources are provided
+      for general educational
+      purposes and are not
+      personalized financial advice.
+    </p>
+
+    <p>
+      <strong>
+        Let's leave the world
+        better than we found it.
+      </strong>
+    </p>
+
+    <a class="back-link"
+       href="phoenix-gateway.html">
+      ← Return to Project Phoenix
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <strong>PROJECT PHOENIX</strong>
+  <p>Hope. Help. Healing.</p>
+  <p>People Before Profit.</p>
+  <p>Let's leave the world better than we found it.</p>
+</footer>
+
 </body>
 </html>
