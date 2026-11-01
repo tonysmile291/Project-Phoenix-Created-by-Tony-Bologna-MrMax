@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recovery Resources | Project Phoenix</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #f7f7f7;
+      line-height: 1.6;
+      background: #101217 url('phoenix-city-background.png')
+                  center top / cover fixed;
+    }
+
+    header, footer {
+      padding: 22px 6%;
+      background: rgba(20, 24, 34, 0.7);
+      border-color: #604020;
+    }
+
+    header { border-bottom: 1px solid #604020; }
+    footer {
+      border-top: 1px solid #604020;
+      text-align: center;
+    }
+
+    .brand {
+      color: #ffa631;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    a { color: #ffbd70; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    h1, h2 { color: #ffa631; }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.2;
+    }
+
+    .intro {
+      max-width: 750px;
+      font-size: 1.15rem;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 22px;
+      margin: 35px 0;
+    }
+
+    .resource-card {
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid #80552c;
+      background: rgba(20, 24, 34, 0.82);
+      box-shadow: 0 0 18px rgba(255, 140, 0, 0.2);
+    }
+
+    .resource-card h2 { margin-top: 0; }
+
+    .resource-card a {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid #ffa631;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resource-card a:hover,
+    .resource-card a:focus-visible {
+      background: #ffa631;
+      color: #101217;
+    }
+
+    .notice {
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(20, 24, 34, 0.85);
+    }
+
+    @media (max-width: 600px) {
+      body { background-attachment: scroll; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">🔥 PROJECT PHOENIX</div>
+    <a class="back-link" href="phoenix-gateway.html">
+      ← Back to Phoenix Gateway
+    </a>
+  </header>
+
+  <main>
+    <h1>💜 Explore Recovery Resources</h1>
+
+    <p class="intro">
+      Recovery is a journey, and nobody should have
+      to search for help alone. Explore organizations,
+      directories, and support services below.
+    </p>
+
+    <div class="resource-grid">
+
+      <section class="resource-card">
+        <h2>💜 Treatment &amp; Support</h2>
+        <p>
+          Find treatment information, recovery
+          programs, and support organizations.
+        </p>
+        <a href="recovery-treatment.html">
+          Explore Treatment →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>📍 Local Assistance</h2>
+        <p>
+          Find directories for nearby services,
+          community programs, and local support.
+        </p>
+        <a href="recovery-local.html">
+          Explore Local Help →
+        </a>
+      </section>
+
+      <section class="resource-card">
+        <h2>🛟 Emergency &amp; Crisis</h2>
+        <p>
+          Find crisis hotlines, immediate support,
+          and emergency assistance information.
+        </p>
+        <a href="recovery-crisis.html">
+          Explore Crisis Help →
+        </a>
+      </section>
+
+    </div>
+
+    <div class="notice">
+      <strong>Need immediate help?</strong>
+      <p>
+        In the United States, call or text
+        <a href="tel:988">988</a> for suicide
+        and crisis support. For an immediate
+        life-threatening emergency, call 911.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <strong>PROJECT PHOENIX</strong>
+    <p>Hope. Help. Healing.</p>
+    <p>Let's leave the world better than we found it.</p>
+    <a href="phoenix-gateway.html">
+      Return to Phoenix Gateway
+    </a>
+  </footer>
+
+</body>
+</html>
