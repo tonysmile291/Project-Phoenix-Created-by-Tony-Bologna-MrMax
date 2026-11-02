@@ -1,0 +1,13 @@
+/* Project Phoenix shared ZIP locator — all nine categories */
+(function(){'use strict';
+const KEY='phoenixZip',CITY='phoenixZipCity',STATE='phoenixZipState';
+const categories={'recovery-resources.html':'addiction treatment recovery support','health-services.html':'affordable healthcare community health centers','ai-services.html':'free AI training digital literacy classes','education.html':'adult education GED classes','job-skills.html':'job training workforce development','housing-help.html':'housing assistance emergency shelter','financial-literacy.html':'free financial counseling budgeting classes','veteran-support.html':'veteran benefits local support services','community-programs.html':'community food assistance support programs'};
+const page=location.pathname.split('/').pop().toLowerCase();const query=categories[page]||'local community assistance';
+function init(){document.querySelectorAll('.phoenix-zip-widget').forEach(function(widget){const form=widget.querySelector('form'),input=widget.querySelector('input'),status=widget.querySelector('.phoenix-zip-status'),link=widget.querySelector('.phoenix-local-search');if(!form||!input||!status||!link)return;
+function show(zip,city,state){input.value=zip;status.textContent='✓ Search area: '+city+', '+state+' '+zip;link.href='https://www.google.com/search?q='+encodeURIComponent(query+' near '+city+' '+state+' '+zip);link.hidden=false}
+async function lookup(zip){status.textContent='Checking ZIP code…';link.hidden=true;try{const response=await fetch('https://api.zippopotam.us/us/'+encodeURIComponent(zip));if(!response.ok)throw Error('ZIP not found');const data=await response.json(),place=data.places&&data.places[0];if(!place)throw Error('ZIP not found');const city=place['place name'],state=place['state abbreviation'];try{localStorage.setItem(KEY,zip);localStorage.setItem(CITY,city);localStorage.setItem(STATE,state)}catch(e){}show(zip,city,state)}catch(e){status.textContent='Could not verify ZIP. Check the ZIP and internet connection.'}}
+form.addEventListener('submit',function(e){e.preventDefault();const zip=input.value.trim();if(!/^\d{5}$/.test(zip)){status.textContent='Enter a valid five-digit ZIP.';link.hidden=true;return}lookup(zip)});
+function restore(){try{const zip=localStorage.getItem(KEY),city=localStorage.getItem(CITY),state=localStorage.getItem(STATE);if(zip&&/^\d{5}$/.test(zip)){if(city&&state)show(zip,city,state);else lookup(zip)}}catch(e){}}
+restore();window.addEventListener('storage',function(e){if([KEY,CITY,STATE].includes(e.key))restore()});});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
