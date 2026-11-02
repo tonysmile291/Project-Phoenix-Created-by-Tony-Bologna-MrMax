@@ -25,15 +25,15 @@ a{color:inherit}
 .hero .intro{font-size:clamp(1rem,2vw,1.3rem);font-style:italic;max-width:600px;margin:0 auto;text-shadow:0 2px 7px #080c18}
 .gateway-layout{width:min(1180px,96%);margin:0 auto 48px;display:grid;grid-template-columns:minmax(245px,1fr) minmax(0,2.1fr);gap:20px;align-items:stretch}
 .glow-panel{border:2px solid #ff9426;border-radius:24px;background:rgba(7,14,32,0.61);box-shadow:0 0 8px #ff7d1b,0 0 20px rgba(255,107,0,.55),inset 0 0 15px rgba(255,107,0,.1)}
-.mission{padding:28px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.mission .emblem{font-size:2.4rem;color:#ffd132}
-.mission h2{color:#ffd42b;font-size:clamp(1.5rem,2.6vw,2.3rem);margin:2px 0 8px;text-decoration:underline;text-decoration-color:#ff8b00;text-underline-offset:9px}
-.mission .promise{font-weight:bold;font-size:clamp(1.1rem,1.9vw,1.45rem);margin:22px 0}
-.mission .divider{color:#ffc229;margin:0 0 16px}
-.values-list{list-style:none;text-align:left;padding:0;margin:0;display:grid;gap:16px}
-.values-list li{display:flex;align-items:center;gap:14px;font-weight:800;font-size:clamp(1rem,1.8vw,1.35rem)}
-.values-list .value-icon{color:#ffdc1d;font-size:1.7rem;min-width:35px;text-align:center}
-.mission .rise{color:#ffd23d;font-weight:bold;font-style:italic;font-size:1.65rem;margin:28px 0 0}
+.mission{padding:24px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.mission .emblem{width:58px;height:58px;display:grid;place-items:center;border:3px double #ffd132;border-radius:50%;font-size:2.1rem;line-height:1;color:#ffd132;text-shadow:0 0 12px #ffa51a}
+.mission h2{color:#ffd42b;font-size:clamp(1.5rem,2.6vw,2.3rem);margin:9px 0 8px;border-bottom:2px solid #ffb51d;padding-bottom:9px}
+.mission .promise{font-weight:bold;font-size:clamp(1.05rem,1.8vw,1.35rem);line-height:1.4;margin:16px 0 20px;max-width:330px}
+.mission .divider{color:#ffc229;margin:0 0 17px;font-size:1.3rem}
+.values-list{list-style:none;text-align:left;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:12px;width:max-content;max-width:100%}
+.values-list li{display:flex;align-items:center;gap:13px;font-weight:800;font-size:clamp(1rem,1.65vw,1.22rem);letter-spacing:.025em}
+.values-list .value-icon{color:#ffdc1d;font-size:1.65rem;min-width:40px;text-align:center;filter:drop-shadow(0 0 5px #ffad20)}
+.mission .rise{color:#ffd23d;font-weight:bold;font-style:italic;font-family:Georgia,serif;font-size:clamp(1.4rem,2.2vw,1.8rem);margin:23px 0 0}
 .resources{padding:15px}
 .resources h2{text-align:center;color:#ffca2d;font-size:clamp(1.6rem,2.7vw,2.2rem);margin:0}
 .resources .subtitle{text-align:center;margin:0 0 12px}
@@ -55,7 +55,7 @@ a{color:inherit}
 .footer-brand small{display:block;color:#ffce35;font-size:1rem}
 .footer-links a{display:block;margin:8px 0;color:#ffe2aa}
 .footer-bottom{max-width:1100px;margin:18px auto 0;border-top:1px solid #d58c2e;padding-top:12px;text-align:center;font-size:.85rem}
-@media(max-width:760px){.site-header{flex-direction:column}.site-nav{justify-content:center}.gateway-layout{grid-template-columns:1fr}.mission{padding:20px}.values-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mission .rise{margin-top:18px}.hero{padding:65px 15px 55px}.footer-grid{grid-template-columns:1fr;gap:16px}.footer-grid>div+div{border-left:0;border-top:1px solid #79502a;padding-top:14px}}
+@media(max-width:760px){.site-header{flex-direction:column}.site-nav{justify-content:center}.gateway-layout{grid-template-columns:1fr}.mission{padding:20px}.values-list{grid-template-columns:1fr;gap:12px}.mission .rise{margin-top:18px}.hero{padding:65px 15px 55px}.footer-grid{grid-template-columns:1fr;gap:16px}.footer-grid>div+div{border-left:0;border-top:1px solid #79502a;padding-top:14px}}
 @media(max-width:460px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service{min-height:180px}.site-nav a{font-size:.75rem;padding:7px 3px}.values-list li{font-size:.85rem;gap:5px}.values-list .value-icon{min-width:24px;font-size:1.3rem}}
 @media(max-width:340px){.services-grid{grid-template-columns:1fr}}
 </style>
@@ -75,10 +75,10 @@ a{color:inherit}
 </section>
 <main class="gateway-layout">
 <section class="mission glow-panel" id="mission">
-<div class="emblem" aria-hidden="true">✪</div><h2>OUR MISSION</h2>
+<div class="emblem" aria-hidden="true">★</div><h2>OUR MISSION</h2>
 <p class="promise">Let's leave the world better than we found it.</p>
-<div class="divider" aria-hidden="true">━━ 🐦‍🔥 ━━</div>
-<ul class="values-list"><li><span class="value-icon" aria-hidden="true">▣</span>KNOWLEDGE</li><li><span class="value-icon" aria-hidden="true">⬡</span>DISCIPLINE</li><li><span class="value-icon" aria-hidden="true">⌕</span>EVIDENCE</li><li><span class="value-icon" aria-hidden="true">♡</span>SERVICE</li></ul>
+<div class="divider" aria-hidden="true">━━ 🦅 ━━</div>
+<ul class="values-list"><li><span class="value-icon" aria-hidden="true">▤</span>KNOWLEDGE</li><li><span class="value-icon" aria-hidden="true">⬟</span>DISCIPLINE</li><li><span class="value-icon" aria-hidden="true">⚲</span>EVIDENCE</li><li><span class="value-icon" aria-hidden="true">♡</span>SERVICE</li></ul>
 <p class="rise">Together, we rise.</p>
 </section>
 <section class="resources glow-panel" id="services">
