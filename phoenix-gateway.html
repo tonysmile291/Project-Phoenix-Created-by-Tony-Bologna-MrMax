@@ -26,8 +26,34 @@
       gap: 12px;
     }
     .brand { color: #ffa631; font-weight: bold; font-size: 1.4rem; }
-    nav a { color: white; margin-right: 14px; text-decoration: none; }
-    nav a:hover { color: #ffa631; }
+    nav {
+  display: flex;
+  gap: 6px;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+nav a {
+  display: inline-block;
+  color: #ffb45c;
+  font-size: 0.85rem;
+  padding: 5px 9px;
+  border: 1px solid #ff8c2b;
+  border-radius: 6px;
+  background: rgba(8, 18, 39, 0.65);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a:visited {
+  color: #ffb45c;
+}
+
+nav a:hover,
+nav a:focus {
+  color: white;
+  background: rgba(255, 140, 43, 0.25);
+}
     .hero {
       text-align: center;
       padding: 65px 20px;
@@ -107,9 +133,9 @@
   <header>
     <div class="brand">🔥 PROJECT PHOENIX</div>
     <nav>
-      <a href="#mission">Our Mission</a>
-      <a href="#help">Get Help</a>
-      <a href="#about">About</a>
+  <a href="our-mission.html">Our Mission</a>
+  <a href="get-help.html">Get Help</a>
+  <a href="about-us.html">About Us</a>
     </nav>
   </header>
 
