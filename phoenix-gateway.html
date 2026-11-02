@@ -60,6 +60,7 @@ a{color:inherit}
 @media(max-width:460px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service{min-height:180px}.site-nav a{font-size:.75rem;padding:7px 3px}.values-list li{font-size:.85rem;gap:5px}.values-list .value-icon{min-width:24px;font-size:1.3rem}}
 @media(max-width:340px){.services-grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="phoenix-zip.css">
 </head>
 <body>
 <header class="site-header" id="home">
@@ -84,6 +85,9 @@ a{color:inherit}
 </section>
 <section class="resources glow-panel" id="services">
 <h2>♡ OUR SERVICES</h2><p class="subtitle">Resources and support for a better tomorrow.</p>
+
+<!-- Project Phoenix shared ZIP locator -->
+<section class="phoenix-zip-widget" aria-label="Find help by ZIP code"><h2>📍 Find Help Near You</h2><p>One ZIP code connects all nine assistance categories.</p><form><input type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter 5-digit ZIP" aria-label="Five-digit ZIP code" required><button type="submit">Set Location</button></form><p class="phoenix-zip-status" role="status">Enter your ZIP to enable local searches.</p><a class="phoenix-local-search" href="#" target="_blank" rel="noopener noreferrer" hidden>🔎 Search for Local Help →</a></section>
 <div class="services-grid">
 <article class="service purple"><div class="service-icon" aria-hidden="true">💜</div><h3>ADDICTION HELP</h3><p>Compassionate support for recovery and healing.</p><a class="service-button" href="recovery-resources.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
 <article class="service green"><div class="service-icon" aria-hidden="true">✚</div><h3>HEALTH SERVICES</h3><p>Access to medical care and wellness resources.</p><a class="service-button" href="health-services.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
@@ -106,5 +110,6 @@ a{color:inherit}
 <div class="footer-bottom">© <span id="year">2026</span> Project Phoenix. Let's leave the world better than we found it.</div>
 </footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script src="phoenix-zip.js" defer></script>
 </body>
 </html>
