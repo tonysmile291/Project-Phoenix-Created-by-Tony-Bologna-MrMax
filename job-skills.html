@@ -139,6 +139,7 @@ a.phoenix-return-button:hover,a.phoenix-return-button:focus-visible{background:#
 /* Phoenix signature: subtle golden halo, no changes to opacity or layout */
 .glass,.glow-panel,.crew-card{box-shadow:0 0 18px rgba(255,137,28,.24),0 0 28px rgba(255,198,75,.24)}
 </style>
+<link rel="stylesheet" href="phoenix-zip.css">
 </head>
 
 <body>
@@ -148,6 +149,10 @@ a.phoenix-return-button:hover,a.phoenix-return-button:focus-visible{background:#
   <p class="tagline">Hope. Help. Healing.</p>
   <p>Project Phoenix | Rise. Rebuild. Renew.</p>
 </header>
+
+<!-- Project Phoenix shared ZIP locator -->
+<section class="phoenix-zip-widget" aria-label="Find help by ZIP code"><h2>📍 Find Help Near You</h2><p>One ZIP code connects all nine assistance categories.</p><form><input type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter 5-digit ZIP" aria-label="Five-digit ZIP code" required><button type="submit">Set Location</button></form><p class="phoenix-zip-status" role="status">Enter your ZIP to enable local searches.</p><a class="phoenix-local-search" href="#" target="_blank" rel="noopener noreferrer" hidden>🔎 Search for Local Help →</a></section>
+
 
 <main>
 
@@ -595,5 +600,6 @@ a.phoenix-return-button:hover,a.phoenix-return-button:focus-visible{background:#
   <p><a class="phoenix-return-button" href="phoenix-gateway.html">← RETURN TO PHOENIX GATEWAY</a></p>
 </footer>
 
+<script src="phoenix-zip.js" defer></script>
 </body>
 </html>
