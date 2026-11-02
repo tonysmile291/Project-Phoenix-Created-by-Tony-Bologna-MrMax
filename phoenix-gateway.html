@@ -1,226 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Phoenix | Rise. Rebuild. Renew.</title>
-  <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: #101217 url('phoenix-city-background.png') center top / cover no-repeat fixed;
-      color: #f7f7f7;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      padding: 18px 6%;
-      background: rgba(20, 24, 34, 0.65);
-      border-bottom: 1px solid #604020;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .brand { color: #ffa631; font-weight: bold; font-size: 1.4rem; }
-    nav {
-  display: flex;
-  gap: 6px;
-  align-self: flex-end;
-  margin-left: auto;
-}
-
-nav a {
-  display: inline-block;
-  color: #ffb45c;
-  font-size: 0.85rem;
-  padding: 5px 9px;
-  border: 1px solid #ff8c2b;
-  border-radius: 6px;
-  background: rgba(8, 18, 39, 0.65);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-nav a:visited {
-  color: #ffb45c;
-}
-
-nav a:hover,
-nav a:focus {
-  color: white;
-  background: rgba(255, 140, 43, 0.25);
-}
-    .hero {
-      text-align: center;
-      padding: 65px 20px;
-      background: rgba(0, 0, 0, 0.25);
-    }
-    .phoenix { font-size: 4rem; }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      line-height: 1.1;
-      margin: 12px 0;
-    }
-    .tagline { color: #ffa631; letter-spacing: .18em; font-weight: bold; }
-    .intro { max-width: 650px; margin: 25px auto; font-size: 1.2rem; }
-    main { max-width: 1200px; margin: auto; padding: 35px 18px; }
-    .mission, .resources {
-      background: rgba(20, 24, 34, 0.78);
-      border: 1px solid #5c4938;
-      box-shadow: 0 0 18px rgba(255, 140, 0, 0.25);
-      border-radius: 16px;
-      padding: 25px;
-      margin-bottom: 25px;
-    }
-    h2 { color: #ffa631; }
-    .values { color: #e4c89f; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-    .resource {
-      padding: 20px;
-      background: rgba(18, 21, 27, 0.78);
-      border: 1px solid #46404a;
-      border-radius: 12px;
-    }
-    .resource h3 { color: #ffa631; margin-bottom: 5px; }
-    .resource p { margin-top: 5px; }
-    .pending {
-      display: inline-block;
-      padding: 7px 12px;
-      background: #333740;
-      border-radius: 7px;
-      color: #ddd;
-      font-size: .9rem;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      border-top: 1px solid #604020;
-      background: rgba(20, 24, 34, 0.65);
-    }
-    footer strong { color: #ffa631; }
-    @media (min-width: 900px) {
-  .gateway-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 24px;
-    align-items: start;
-  }
-    }
-
-  /* Phoenix resource card hover effect */
-.resource {
-  transition: transform 0.25s ease,
-              box-shadow 0.25s ease;
-}
-
-@media (hover: hover) {
-  .resource:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 22px rgba(255, 140, 0, 0.35);
-  }
-}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08132b">
+<title>Project Phoenix | Rise. Rebuild. Renew.</title>
+<style>
+:root{--gold:#ffbd29;--orange:#ff8d22;--navy:#07142b;--light:#fff7ec}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:white;font-family:Arial,Helvetica,sans-serif;line-height:1.45;background:#09152b url("phoenix-city-background.png") center top/cover fixed no-repeat}
+a{color:inherit}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px clamp(16px,4vw,46px);background:rgba(5,15,38,0.61);border-bottom:1px solid rgba(255,152,25,.35)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:clamp(1rem,2vw,1.4rem);font-weight:900;letter-spacing:.1em;line-height:1.05}
+.brand-symbol{font-size:2.2rem;filter:drop-shadow(0 0 7px #ff6b00)}
+.brand-name span{display:block;color:#ffcb38}
+.site-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(5px,1.7vw,22px)}
+.site-nav a{text-decoration:none;font-size:.83rem;font-weight:bold;padding:9px 5px;border-bottom:2px solid transparent}
+.site-nav a:hover,.site-nav a:focus-visible,.site-nav a.active{color:#ffce36;border-bottom-color:#ff9b00;text-shadow:0 0 12px #ff7c00}
+.hero{text-align:center;padding:clamp(64px,9vw,125px) 18px clamp(50px,7vw,85px);background:linear-gradient(180deg,rgba(5,12,30,.06),rgba(5,12,30,.22))}
+.hero h1{font-size:clamp(2.4rem,7vw,5.7rem);letter-spacing:.045em;line-height:1.05;margin:0;text-shadow:0 3px 12px #0a0b16,0 0 25px #ef6a18;font-weight:900}
+.hero .tagline{color:#ffcb31;letter-spacing:clamp(.14em,.65vw,.36em);font-size:clamp(.95rem,2.3vw,1.65rem);font-weight:900;margin:12px 0 18px;text-shadow:0 2px 8px #17131a}
+.hero .welcome{font-size:clamp(1.2rem,2.7vw,1.85rem);font-weight:bold;margin:12px 0 3px;text-shadow:0 2px 8px #0a0b16}
+.hero .intro{font-size:clamp(1rem,2vw,1.3rem);font-style:italic;max-width:600px;margin:0 auto;text-shadow:0 2px 7px #080c18}
+.gateway-layout{width:min(1180px,96%);margin:0 auto 48px;display:grid;grid-template-columns:minmax(245px,1fr) minmax(0,2.1fr);gap:20px;align-items:stretch}
+.glow-panel{border:2px solid #ff9426;border-radius:24px;background:rgba(7,14,32,0.61);box-shadow:0 0 8px #ff7d1b,0 0 20px rgba(255,107,0,.55),inset 0 0 15px rgba(255,107,0,.1)}
+.mission{padding:24px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.mission .emblem{width:58px;height:58px;display:grid;place-items:center;border:3px double #ffd132;border-radius:50%;font-size:2.1rem;line-height:1;color:#ffd132;text-shadow:0 0 12px #ffa51a}
+.mission h2{color:#ffd42b;font-size:clamp(1.5rem,2.6vw,2.3rem);margin:9px 0 8px;border-bottom:2px solid #ffb51d;padding-bottom:9px}
+.mission .promise{font-weight:bold;font-size:clamp(1.05rem,1.8vw,1.35rem);line-height:1.4;margin:16px 0 20px;max-width:330px}
+.mission .divider{color:#ffc229;margin:0 0 17px;font-size:1.3rem}
+.values-list{list-style:none;text-align:left;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:12px;width:max-content;max-width:100%}
+.values-list li{display:flex;align-items:center;gap:13px;font-weight:800;font-size:clamp(1rem,1.65vw,1.22rem);letter-spacing:.025em}
+.values-list .value-icon{color:#ffdc1d;font-size:1.65rem;min-width:40px;text-align:center;filter:drop-shadow(0 0 5px #ffad20)}
+.values-list a{color:inherit;text-decoration:none;border-bottom:1px solid transparent}.values-list a:hover,.values-list a:focus-visible{color:#ffe077;border-bottom-color:#ffb72e;text-shadow:0 0 9px #ff8a00}
+.mission .rise{color:#ffd23d;font-weight:bold;font-style:italic;font-family:Georgia,serif;font-size:clamp(1.4rem,2.2vw,1.8rem);margin:23px 0 0}
+.resources{padding:15px}
+.resources h2{text-align:center;color:#ffca2d;font-size:clamp(1.6rem,2.7vw,2.2rem);margin:0}
+.resources .subtitle{text-align:center;margin:0 0 12px}
+.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.service{--accent:#ffa52e;text-align:center;border:2px solid var(--accent);border-radius:14px;background:rgba(7,16,34,0.68);box-shadow:inset 0 0 14px color-mix(in srgb,var(--accent) 24%,transparent),0 0 7px color-mix(in srgb,var(--accent) 45%,transparent);padding:12px 7px;display:flex;flex-direction:column;align-items:center;min-height:190px}
+.service-icon{font-size:2.4rem;line-height:1.1;color:var(--accent);font-weight:900}
+.service h3{font-size:clamp(.86rem,1.55vw,1.15rem);color:var(--accent);margin:9px 0 4px;line-height:1.15}
+.service p{font-size:clamp(.78rem,1.18vw,.96rem);line-height:1.3;margin:0 0 12px;flex:1}
+.service-button{display:inline-block;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:900;font-size:.78rem;padding:8px 12px;box-shadow:0 0 11px color-mix(in srgb,var(--accent) 40%,transparent)}
+.service-button:hover,.service-button:focus-visible{filter:brightness(1.18);transform:translateY(-2px)}
+.purple{--accent:#d34de9}.green{--accent:#5ee41d}.blue{--accent:#2c9aff}.orange{--accent:#ff8a1a}.yellow{--accent:#edbb18}.cyan{--accent:#14d3d9}.lime{--accent:#46d92a}.red{--accent:#f3484e}.pink{--accent:#d85ee8}
+.site-footer{background:rgba(5,16,37,0.61);border-top:2px solid #ff9b22;padding:25px max(20px,5vw) 16px}
+.footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;text-align:center}
+.footer-grid>div+div{border-left:1px solid #c77b2e}
+.footer-grid h2{font-size:1.1rem;color:#ffd02f;margin:0 0 10px}
+.footer-grid p{margin:8px 0}
+.footer-brand{font-size:1.5rem;font-weight:900;letter-spacing:.05em}
+.footer-brand .bird{font-size:2.8rem;display:block}
+.footer-brand small{display:block;color:#ffce35;font-size:1rem}
+.footer-links a{display:block;margin:8px 0;color:#ffe2aa}
+.footer-bottom{max-width:1100px;margin:18px auto 0;border-top:1px solid #d58c2e;padding-top:12px;text-align:center;font-size:.85rem}
+@media(max-width:760px){.site-header{flex-direction:column}.site-nav{justify-content:center}.gateway-layout{grid-template-columns:1fr}.mission{padding:20px}.values-list{grid-template-columns:1fr;gap:12px}.mission .rise{margin-top:18px}.hero{padding:65px 15px 55px}.footer-grid{grid-template-columns:1fr;gap:16px}.footer-grid>div+div{border-left:0;border-top:1px solid #79502a;padding-top:14px}}
+@media(max-width:460px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service{min-height:180px}.site-nav a{font-size:.75rem;padding:7px 3px}.values-list li{font-size:.85rem;gap:5px}.values-list .value-icon{min-width:24px;font-size:1.3rem}}
+@media(max-width:340px){.services-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="brand">🔥 PROJECT PHOENIX</div>
-    <nav>
-  <a href="our-mission.html">Our Mission</a>
-  <a href="get-help.html">Get Help</a>
-  <a href="about-us.html">About Us</a>
-    </nav>
-  </header>
-
-  <section class="hero" id="about">
-    <div class="phoenix" style="display:none">🐦‍🔥</div>
-    <h1>PROJECT PHOENIX</h1>
-    <p class="tagline">RISE. REBUILD. RENEW.</p>
-    <p class="intro">
-      Every new beginning starts with one decision —
-      to keep moving forward.
-    </p>
-  </section>
-
-  <main>   <div class="gateway-layout">
-    <section class="mission" id="mission">
-      <h2>Our Mission</h2>
-      <p>Let's leave the world better than we found it.</p>
-      <p class="values">
-        Knowledge • Discipline • Evidence • Service
-      </p>
-      <p><em>Together, we rise.</em></p>
-    </section>
-
-    <section class="resources" id="help">
-      <h2>Gateway to Help</h2>
-      <p>
-        Our goal is to connect people with trustworthy
-        resources, organizations, and opportunities.
-      </p>
-      <div class="grid">
-        <article class="resource">
-          <h3>💜 Addiction Recovery</h3>
-          <p>Recovery and compassionate support.</p>
-          <a href="recovery-resources.html">Explore Recovery Resources →</a>
-        </article>
-        <article class="resource">
-          <h3>💚 Health Services</h3>
-          <p>Medical care and wellness resources.</p>
-          <a href="health-services.html">Explore Health Services →</a>
-        </article>
-        <article class="resource">
-          <h3>🧠 AI Services</h3>
-          <p>Tools to help you learn and grow.</p>
-          <a href="ai-services.html">Explore AI Services →</a>
-        </article>
-        <article class="resource">
-          <h3>🎓 Education</h3>
-          <p>Learning opportunities and research.</p>
-          <a href="education.html">Explore Education Resources →</a>
-        </article>
-        <article class="resource">
-          <h3>💼 Job Skills</h3>
-          <p>Training and career development.</p>
-          <a href="job-skills.html">Explore Job Skills →</a>
-        </article>
-        <article class="resource">
-          <h3>🏠 Housing Help</h3>
-          <p>Resources for finding stable housing.</p>
-          <a href="housing-help.html">Explore Housing Help →</a>
-        </article>
-        <article class="resource">
-          <h3>💵 Financial Literacy</h3>
-          <p>Guidance for managing your finances.</p>
-          <a href="financial-literacy.html">Explore Financial Literacy →</a>
-        </article>
-        <article class="resource">
-          <h3>⭐ Veteran Support</h3>
-          <p>Resources for those who served.</p>
-          <a href="veteran-support.html">Explore Veteran Support →</a>
-        </article>
-        <article class="resource">
-          <h3>🤝 Community Programs</h3>
-          <p>People and organizations helping communities.</p>
-          
-<a href="community-programs.html">Explore Community Programs →</a>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <strong>PROJECT PHOENIX</strong>
-    <p>Hope. Help. Healing.</p>
-    <p>Let's leave the world better than we found it.</p>
- <p><a href="about-us.html">❤️ About Us — Meet the Project Phoenix Crew →</a></p>
-  </footer>
+<header class="site-header" id="home">
+<a class="brand" href="phoenix-gateway.html"><span class="brand-symbol" aria-hidden="true">🐦‍🔥</span><span class="brand-name">PROJECT<span>PHOENIX</span></span></a>
+<nav class="site-nav" aria-label="Main navigation">
+<a class="active" href="#home">HOME</a><a href="about-us.html">ABOUT US</a><a href="#services">SERVICES</a><a href="#services">RESOURCES</a><a href="get-help.html">GET HELP</a><a href="#contact">CONTACT</a>
+</nav>
+</header>
+<section class="hero" aria-labelledby="page-title">
+<h1 id="page-title">PROJECT PHOENIX</h1>
+<p class="tagline">RISE. REBUILD. RENEW.</p>
+<p class="welcome">Welcome to Project Phoenix.</p>
+<p class="intro">Every new beginning starts with one decision—<br>to keep moving forward.</p>
+</section>
+<main class="gateway-layout">
+<section class="mission glow-panel" id="mission">
+<div class="emblem" aria-hidden="true">★</div><h2>OUR MISSION</h2>
+<p class="promise">Let's leave the world better than we found it.</p>
+<div class="divider" aria-hidden="true">━━ 🦅 ━━</div>
+<ul class="values-list"><li><span class="value-icon" aria-hidden="true">▤</span><a href="mission-knowledge.html">KNOWLEDGE</a></li><li><span class="value-icon" aria-hidden="true">⬟</span><a href="mission-discipline.html">DISCIPLINE</a></li><li><span class="value-icon" aria-hidden="true">⚲</span><a href="mission-evidence.html">EVIDENCE</a></li><li><span class="value-icon" aria-hidden="true">♡</span><a href="mission-service.html">SERVICE</a></li></ul>
+<p class="rise">Together, we rise.</p>
+</section>
+<section class="resources glow-panel" id="services">
+<h2>♡ OUR SERVICES</h2><p class="subtitle">Resources and support for a better tomorrow.</p>
+<div class="services-grid">
+<article class="service purple"><div class="service-icon" aria-hidden="true">💜</div><h3>ADDICTION HELP</h3><p>Compassionate support for recovery and healing.</p><a class="service-button" href="recovery-resources.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service green"><div class="service-icon" aria-hidden="true">✚</div><h3>HEALTH SERVICES</h3><p>Access to medical care and wellness resources.</p><a class="service-button" href="health-services.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service blue"><div class="service-icon" aria-hidden="true">🧠</div><h3>AI SERVICES</h3><p>AI assistance to help you learn and grow.</p><a class="service-button" href="ai-services.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service orange"><div class="service-icon" aria-hidden="true">🎓</div><h3>EDUCATION</h3><p>Learning opportunities for a brighter future.</p><a class="service-button" href="education.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service yellow"><div class="service-icon" aria-hidden="true">💼</div><h3>JOB SKILLS</h3><p>Training and resources to build your career.</p><a class="service-button" href="job-skills.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service cyan"><div class="service-icon" aria-hidden="true">⌂</div><h3>HOUSING HELP</h3><p>Resources to find safe and stable housing.</p><a class="service-button" href="housing-help.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service lime"><div class="service-icon" aria-hidden="true">$</div><h3>FINANCIAL LITERACY</h3><p>Tools and guidance for financial freedom.</p><a class="service-button" href="financial-literacy.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service red"><div class="service-icon" aria-hidden="true">★</div><h3>VETERAN SUPPORT</h3><p>Honoring and supporting those who served.</p><a class="service-button" href="veteran-support.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+<article class="service pink"><div class="service-icon" aria-hidden="true">♧</div><h3>COMMUNITY PROGRAMS</h3><p>Building stronger communities together.</p><a class="service-button" href="community-programs.html">LEARN MORE <span aria-hidden="true">→</span></a></article>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+<div class="footer-grid">
+<div><h2>CONTACT & HELP</h2><p>Call us: <a href="tel:+18033916523">1-803-391-6523</a></p><p>Looking for support or information?</p><div class="footer-links"><a href="get-help.html">Get Help</a><a href="about-us.html">About Us</a></div></div>
+<div class="footer-brand"><span class="bird" aria-hidden="true">🐦‍🔥</span>PROJECT PHOENIX<small>Hope. Help. Healing.</small></div>
+<div><h2>STAY CONNECTED</h2><p>People Before Profit.</p><div class="footer-links"><a href="our-mission.html">Our Mission</a><a href="#home">Back to Top ↑</a></div></div>
+</div>
+<div class="footer-bottom">© <span id="year">2026</span> Project Phoenix. Let's leave the world better than we found it.</div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

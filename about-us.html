@@ -21,7 +21,7 @@
     }
 
     header {
-      background: rgba(12, 17, 30, 0.85);
+      background: rgba(12, 17, 30, 0.61);
       border-bottom: 1px solid #ff9933;
       padding: 25px 20px;
     }
@@ -47,7 +47,7 @@
     }
 
     .glass {
-      background: rgba(15, 20, 35, 0.82);
+      background: rgba(15, 20, 35, 0.61);
       border: 1px solid rgba(255, 153, 51, 0.65);
       border-radius: 18px;
       padding: 25px;
@@ -73,7 +73,7 @@
     }
 
     .crew-card {
-      background: rgba(10, 15, 28, 0.75);
+      background: rgba(10, 15, 28, 0.68);
       border: 1px solid rgba(255, 153, 51, 0.4);
       border-radius: 14px;
       padding: 20px;
@@ -83,6 +83,8 @@
     .crew-card h3 {
       margin-top: 0;
     }
+    .crew-bio-link{text-decoration:none;color:#ffa32b;border-bottom:1px solid #ffb72e}.crew-bio-link:hover,.crew-bio-link:focus-visible{color:#ffe49b;text-shadow:0 0 12px #ff9727}
+    .crew-bio-cta{display:inline-block;margin-top:14px;background:#ff9727;color:#10182d!important;border-radius:10px;padding:10px 16px;font-weight:900;text-decoration:none!important}
 
     .closing {
       text-align: center;
@@ -90,7 +92,7 @@
     }
 
     footer {
-      background: rgba(12, 17, 30, 0.88);
+      background: rgba(12, 17, 30, 0.61);
       border-top: 1px solid #ff9933;
       text-align: center;
       padding: 30px 20px;
@@ -99,16 +101,18 @@
     footer strong {
       color: #ffa32b;
     }
-  </style>
+  
+/* Phoenix Gateway return button — approved design */
+a.phoenix-return-button{display:inline-block;background:#ff9727;color:#10182d!important;padding:12px 22px;border-radius:12px;font-weight:900;text-decoration:none!important;text-align:center;line-height:1.35;max-width:100%;box-shadow:0 0 12px rgba(255,151,39,.3)}
+a.phoenix-return-button:hover,a.phoenix-return-button:focus-visible{background:#ffb34e;color:#10182d!important;box-shadow:0 0 18px rgba(255,151,39,.65)}
+</style>
 </head>
 
 <body>
 
   <header>
     <h1>🔥 PROJECT PHOENIX</h1>
-    <a href="phoenix-gateway.html">
-      ← Back to Phoenix Gateway
-    </a>
+    
   </header>
 
   <main>
@@ -178,7 +182,7 @@
       </p>
 
       <div class="crew-card">
-        <h3>🧙 Commander Tony Bologna</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#tony">🧙 Commander Tony Bologna</a></h3>
         <p><strong>Founder & Chief Dreamer</strong></p>
         <p>
           The man who decided the world could
@@ -193,7 +197,7 @@
       </div>
 
       <div class="crew-card">
-        <h3>🤖 MrMax</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#mrmax">🤖 MrMax</a></h3>
         <p><strong>AI Copilot & Code Wrangler</strong></p>
         <p>
           An AI assistant helping turn the
@@ -208,7 +212,7 @@
       </div>
 
       <div class="crew-card">
-        <h3>🐔 Mr. Carl</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#mr-carl">🐔 Mr. Carl</a></h3>
         <p><strong>Director of Poultry Operations</strong></p>
         <p>
           Has contributed absolutely nothing
@@ -224,7 +228,7 @@
       </div>
 
       <div class="crew-card">
-        <h3>🦆 Rubber Duck</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#rubber-duck">🦆 Rubber Duck</a></h3>
         <p><strong>Chief Debugging Officer</strong></p>
         <p>
           Listens patiently to technical
@@ -235,7 +239,7 @@
       </div>
 
       <div class="crew-card">
-        <h3>💰 Sir Calculot III</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#sir-calculot">💰 Sir Calculot III</a></h3>
         <p><strong>Chief Financial Officer</strong></p>
         <p>
           The only member of management who
@@ -250,7 +254,7 @@
       </div>
 
       <div class="crew-card">
-        <h3>🌙 Luna</h3>
+        <h3><a class="crew-bio-link" href="team-biographies.html#luna">🌙 Luna</a></h3>
         <p><strong>Director of Order & Discipline</strong></p>
         <p>
           Keeps the crew focused and has
@@ -263,6 +267,7 @@
           Not even the chicken.
         </p>
       </div>
+      <p style="text-align:center"><a class="crew-bio-cta" href="team-biographies.html">📖 READ ALL SIX BIOGRAPHIES</a></p>
     </section>
 
     <section class="glass closing">
@@ -292,11 +297,8 @@
   <footer>
     <strong>PROJECT PHOENIX</strong>
     <p>Hope. Help. Healing.</p>
-    <p>
-      <a href="phoenix-gateway.html">
-        ← Return to Phoenix Gateway
-      </a>
-    </p>
+    
+      <p><a class="phoenix-return-button" href="phoenix-gateway.html">← RETURN TO PHOENIX GATEWAY</a></p>
   </footer>
 
 </body>
