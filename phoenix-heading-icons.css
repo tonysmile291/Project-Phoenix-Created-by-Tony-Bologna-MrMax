@@ -1,0 +1,15 @@
+/* Project Phoenix - golden Gateway emblem in service-page headings.
+   Uses the existing phoenix-gold-emblem.svg from the site root. */
+.phoenix-heading-icon{
+  display:inline-block;
+  width:40px;
+  height:25px;
+  max-width:none;
+  object-fit:contain;
+  vertical-align:-0.18em;
+  margin-right:.28em;
+  filter:drop-shadow(0 0 6px rgba(255,174,27,.75));
+}
+h1>.phoenix-heading-icon{width:48px;height:30px}
+h3>.phoenix-heading-icon{width:30px;height:19px}
+.brand>.phoenix-heading-icon{width:48px;height:30px}

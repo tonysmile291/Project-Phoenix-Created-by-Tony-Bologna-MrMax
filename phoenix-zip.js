@@ -22,8 +22,8 @@
     },
     'ai-services.html': {
       label: 'AI Training',
-      all: 'free AI training digital literacy classes',
-      free: 'free AI training digital literacy classes'
+      all: 'AI training digital literacy classes',
+      free: 'free beginner AI lessons tutorials no cost artificial intelligence courses'
     },
     'education.html': {
       label: 'Education',
@@ -42,7 +42,7 @@
     },
     'financial-literacy.html': {
       label: 'Financial Counseling',
-      all: 'free financial counseling budgeting classes',
+      all: 'financial counseling budgeting classes',
       free: 'free financial counseling budgeting classes'
     },
     'veteran-support.html': {
