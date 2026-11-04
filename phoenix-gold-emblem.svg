@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 62" width="120" height="62">
+  <defs>
+    <linearGradient id="phoenixGoldHeader" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff5a0"/>
+      <stop offset=".5" stop-color="#ffcc28"/>
+      <stop offset="1" stop-color="#ed6b05"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#phoenixGoldHeader)" stroke="#ff9c0a" stroke-width=".7">
+    <path d="M60 34 C48 20 24 27 7 4 C17 28 29 38 47 39 L15 25 C28 43 39 48 54 44 L35 42 L56 53 L60 61 L64 53 L85 42 L66 44 C81 48 92 43 105 25 L73 39 C91 38 103 28 113 4 C96 27 72 20 60 34Z"/>
+    <path d="M53 28 Q60 18 67 28 L64 43 L60 52 L56 43Z"/>
+    <path d="M56 24 Q61 16 65 24 L73 26 L65 29 L63 36 L57 36Z"/>
+  </g>
+</svg>
